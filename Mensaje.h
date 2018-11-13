@@ -1,5 +1,6 @@
 #ifndef Mensaje_h
 #define Mensaje_h
+using namespace std;
 class Mensaje{
 	bool ultimo;
 	char dato [40];
@@ -8,7 +9,7 @@ class Mensaje{
 			strcpy (dato,"");
 			ultimo=false;
 			}
-		Mensaje(std::string d) {
+		Mensaje(string d) {
 			strcpy (dato,d.c_str());
 			ultimo=false;
 			}
@@ -16,8 +17,8 @@ class Mensaje{
 			strcpy(dato,m.dato);
 			ultimo=false;
 			}
-		std::string getDato(){return dato;};
-		void setDato(std::string d){
+		string getDato(){return dato;};
+		void setDato(string d){
 		  strcpy (dato,d.c_str());
 		  ultimo=false;
 		}
@@ -25,7 +26,7 @@ class Mensaje{
 		void setUltimo(){ultimo=true;};
 		bool esUltimo(){return ultimo;};
 	
-		friend std::ostream& operator<<(std::ostream& os, Mensaje m){
+		friend ostream& operator<<(ostream& os, Mensaje m){
 			os<<"("<<m.getDato();
 			if (m.esUltimo()) os<<", ultimo";
 			return os<<")";
