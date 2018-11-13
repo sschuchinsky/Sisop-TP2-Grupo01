@@ -20,14 +20,17 @@ int main(int argc, char * argv[]){
     sv_shm area("area");
     msj=reinterpret_cast<Mensaje *> (area.map(BUFSIZ));
     msj->setDato(argv[1]);
-    if (argc>=3){
-        msj->setUltimo();
-    }
-    cout<<argv[1]<<" en espera"<<endl;
+    
+    cout<<argv[1]<<" entra a sala de espera, sigo?"<<endl;
     cin.ignore();
     cliente.post();
     cout<<"Esperando al barbero"<<endl;
     cin.ignore();
     barbero.wait();
     cout<<"Barbero listo, ingresa "<<argv[1]<<endl;
+
+     if (argc>=3){
+        msj->setUltimo();
+    }
+
 }
