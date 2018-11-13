@@ -23,6 +23,11 @@ int main(int argc, char * argv[]){
     if (argc>=3){
         msj->setUltimo();
     }
+    cout<<argv[1]<<" en espera"<<endl;
+    cin.ignore();
     cliente.post();
+    cout<<"Esperando al barbero"<<endl;
+    cin.ignore();
     barbero.wait();
+    cout<<"Barbero listo, ingresa "<<argv[1]<<endl;
 }

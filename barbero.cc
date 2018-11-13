@@ -15,9 +15,16 @@ int main(){
     sv_shm area("area");
     msj=reinterpret_cast<Mensaje *> (area.map(BUFSIZ));
     while (!msj->esUltimo()){
-        cliente.wait();
+        cout<<"Barbero listo"<<endl;
+        cin.ignore();
         barbero.post();
+        cout<<"Esperando cliente"<<endl;
+        cin.ignore();
+        cliente.wait();
         cout<<"Atendiendo a "<<msj->getDato()<<endl;
+        cin.ignore();
+        cout<<"Corte finalizado"<<endl;
+        cin.ignore();
     }
     cliente.del();
     barbero.del();
