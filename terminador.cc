@@ -1,6 +1,5 @@
 #include  "Sem-sv/sv_sem.h"
 #include  "Sem-sv/sv_shm.h"
-#include  "Mensaje.h"
 #include  "portada.h"
 using namespace std;
 

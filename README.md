@@ -8,5 +8,3 @@
 4-Activar varios clientes en distintas consolas ( ./cliente <nombre>)
 5-Para indicar que es el ultimo cliente pasar un segundo argumento que puede ser cualquier cosa(./cliente <nombre> [2do argumento])
 6-Correr el terminador (no es necesario)
-
-Para continuar en cada seccion apretar enter

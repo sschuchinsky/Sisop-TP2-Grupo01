@@ -20,14 +20,14 @@ int main(){
   
 	cout<<"Barbero listo"<<endl;
 	barbero.post();
-        cout<<"Esperando cliente"<<endl;
+        cout<<"Esperando cliente. Presione enter para continuar.."<<endl;
 	cin.ignore();
         cliente.wait();
-        cout<<"Atendiendo cliente "<<a->getDato()<<endl;
-	cout<<"Terminar corte?"<<endl;
+        cout<<"Atendiendo cliente "<<endl;
+	cout<<"Terminar corte? Presione enter para continuar.."<<endl;
         cin.ignore();
         cout<<"Corte finalizado"<<endl;
-	cout<<"Sigo con el proximo cliente?"<<endl;
+	cout<<"Sigo con el proximo cliente? Presione enter para continuar.."<<endl;
         cin.ignore();
     }
     

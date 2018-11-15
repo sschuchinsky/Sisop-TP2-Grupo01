@@ -19,9 +19,8 @@ int main(int argc, char * argv[]){
    Area * a;
    sv_shm area("area");
    a=reinterpret_cast<Area *> (area.map(BUFSIZ));
-   a->setDato(argv[1]);
     
-    cout<<argv[1]<<" entra a sala de espera, sigo?"<<endl;
+    cout<<argv[1]<<" entra a sala de espera, presione enter para continuar.."<<endl;
     cin.ignore();
     cliente.post();
     cout<<argv[1]<<" esperando al barbero"<<endl;
